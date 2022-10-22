@@ -1,6 +1,6 @@
 # NEAT: Neural Attention Fields for End-to-End Autonomous Driving
 
-## [Paper](http://www.cvlibs.net/publications/Chitta2021ICCV.pdf) | [Supplementary](http://www.cvlibs.net/publications/Chitta2021ICCV_supplementary.pdf) | [Video](https://www.youtube.com/watch?v=gtO-ghjKkRs) | Poster | Blog
+## [Paper](http://www.cvlibs.net/publications/Chitta2021ICCV.pdf) | [Supplementary](http://www.cvlibs.net/publications/Chitta2021ICCV_supplementary.pdf) | [Video](https://www.youtube.com/watch?v=gtO-ghjKkRs) | [Talk](https://www.youtube.com/watch?v=hYm6LPTyHHA) | [Poster](https://www.cvlibs.net/publications/Chitta2021ICCV_poster.pdf) | [Slides](https://www.cvlibs.net/publications/Chitta2021ICCV_slides.pdf)
 
 <img src="neat/assets/neat_clip.GIF" height="270" hspace=30>
 
@@ -16,7 +16,7 @@ This repository is for the ICCV 2021 paper [NEAT: Neural Attention Fields for En
 ```
 
 ## Setup
-Please follow the installation instructions from our [TransFuser repository](https://github.com/autonomousvision/transfuser) to set up the CARLA simulator. The conda environment required for NEAT can be installed via:
+Please follow the installation instructions from our [TransFuser repository](https://github.com/autonomousvision/transfuser/tree/cvpr2021) to set up the CARLA simulator. The conda environment required for NEAT can be installed via:
 ```Shell
 conda env create -f environment.yml
 conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
@@ -91,13 +91,11 @@ Spin up a CARLA server (described above) and run the required agent. The require
 ```Shell
 CUDA_VISIBLE_DEVICES=0 ./leaderboard/scripts/run_evaluation.sh
 ```
-CARLA also has an official [Autonomous Driving Leaderboard](https://leaderboard.carla.org/) on which different models can be evaluated. The [leaderboard_submission branch of the TransFuser repository](https://github.com/autonomousvision/transfuser/tree/leaderboard_submission) provides details on how to build a docker image and submit it to the leaderboard.
 
 ## Acknowledgements
-This implementation primarily extends the existing [TransFuser repository](https://github.com/autonomousvision/transfuser).
+This implementation primarily extends the [cvpr2021 branch of the existing TransFuser repository](https://github.com/autonomousvision/transfuser/tree/cvpr2021).
 
-If you found our work interesting, check out these other papers on autonomous driving from our group.
-- [Prakash et al. - Multi-Modal Fusion Transformer for End-to-End Autonomous Driving (CVPR'21)](http://www.cvlibs.net/publications/Prakash2021CVPR.pdf)
-- [Behl et al. - Label efficient visual abstractions for autonomous driving (IROS'20)](https://arxiv.org/pdf/2005.10091.pdf)
-- [Ohn-Bar et al. - Learning Situational Driving (CVPR'20)](https://openaccess.thecvf.com/content_CVPR_2020/papers/Ohn-Bar_Learning_Situational_Driving_CVPR_2020_paper.pdf)
-- [Prakash et al. - Exploring Data Aggregation in Policy Learning for Vision-based Urban Autonomous Driving (CVPR'20)](https://openaccess.thecvf.com/content_CVPR_2020/papers/Prakash_Exploring_Data_Aggregation_in_Policy_Learning_for_Vision-Based_Urban_Autonomous_CVPR_2020_paper.pdf)
+If you found our work interesting, check out the code for some more recent work on CARLA from our group:
+- [Renz et al., PlanT: Explainable Planning Transformers via Object-Level Representations (CoRL 2022)](https://github.com/autonomousvision/plant)
+- [Chitta et al., TransFuser: Imitation with Transformer-Based Sensor Fusion for Autonomous Driving (PAMI 2022)](https://github.com/autonomousvision/transfuser)
+- [Hanselmann et al., KING: Generating Safety-Critical Driving Scenarios for Robust Imitation via Kinematics Gradients (ECCV 2022)](https://github.com/autonomousvision/king)
